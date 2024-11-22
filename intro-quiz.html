@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/intro-quiz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Rubik+Puddles&display=swap" rel="stylesheet">
+  <title>Quiz App</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <header>
+    <div class="img-logo">
+      <img src="images/logo.png" width="85%">
+    </div>
+
+    <div class="buttons-div">
+      <div>
+        <a class="login-btn js-login-btn" href="login.html">Sign in</a>
+      </div>
+      
+      <button class="nav-menu">
+        <span for="nav-toggle" class="burger_icon" id="icon_burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </span>
+      </button>
+    </div>
+
+    <div class="navigation">
+      <div class="naviagation-links">
+        <button class="play" onclick="location.href = '/intro-quiz.html'">Play</button>
+        <button class="add-quiz">Add quiz</button>
+        <button class="mulit-player">Mulit-player competition</button>
+        <!-- <a class="login" href="login.html">Log in</a> -->
+        <button class="login" onclick="window.location.href='/login.html' ">Sign in</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="Quiz-content-div">
+
+      <div class="quiz-header-div">
+        <h3 class="rounds">It mattes <br> 
+          <span>how you ask</span>
+        </h3>
+
+        <div class="quiz-info-side">
+          <div class="profile-div">
+            <img src="images/icons/Profile.svg" alt="" width="30px">
+
+            <div class="profile-content">
+              <div class="coin-div">
+                <img src="images/icons/Coin.svg" alt="">
+                <p class="score">50</p>
+              </div>
+  
+              <div class="rating-div">
+                <strong>Rating</strong>
+                <img src="images/icons/Star.svg" alt="">
+              </div>
+            </div>
+          </div>
+  
+          <div class="rounds-div">
+            <h3 class="rounds-num js-rounds-nums">0/5</h3>
+            <div class="rounds-Answer-div">
+              <div class="rounds-Answer js-rounds-Answer" id="round-div"></div>
+              <div class="rounds-Answer js-rounds-Answer" id="round-div"></div>
+              <div class="rounds-Answer js-rounds-Answer" id="round-div"></div>
+              <div class="rounds-Answer js-rounds-Answer" id="round-div"></div>
+              <div class="rounds-Answer js-rounds-Answer" id="round-div"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="quizer-side-div js-quiz-question">
+
+        <div class="count-div">
+          <p class="js-ans-time">Answer time countdown:</p>
+          <div class="countdown-num js-count-down">20</div>
+        </div>
+
+        <div class="quiz-container js-quiz-container">
+
+          <div class="question-div">
+            <p class="question js-question">Question</p>
+            <p class="question-text js-question-text">
+            </p>
+          </div>
+
+          <div class="js-answerDiv">
+          </div>
+
+          <!-- correct and incorrect div  -->
+          <div class="your-ans-div" hidden>
+            <div  class="your-answer-div">
+              <p class="your-answer">Your answer:</p>
+              <p class="your-ans-selected">
+                Trainer
+              </p>
+            </div>
+
+              <div class="time-out js-time-out">
+                <img src="images/icons/time.png" alt="">
+                <p>Timeout</p>
+              </div>
+
+              <div class="incorrect-div js-incorrect-div">Sorry, your answer is incorrect.</div>
+
+              <div class="correct-div js-correct-div">Your answer is correct.</div>
+          </div>
+
+          <!-- Quiz completed  -->
+          <div class="congrats-msg-div js-congrats-msg-div" hidden>
+            <div class="congrats-msg">Congratulations! You have completed <br> Round 1</div>
+            <button class="round2-btn">Round 2 coming soon</button>
+            <br>
+            <button class="round2-btn" onclick="window.location.href ='/intro-quiz.html' ">Re-play Round 1</button>
+          </div>
+        </div>
+        
+        <button class="try-again-btn" hidden>Try again</button>
+
+        <div class="button-div">
+          <button class="Submit-btn js-submit-btn">Submit answer</button>
+          <button class="next-btn js-next-btn" hidden>Next</button>
+        </div>
+      </div> 
+
+      <button class="start-quiz-btn js-start-btn">Start quiz</button>
+    </div>
+  </main>
+
+  <script src="scripts/navigation.js"></script>
+  <script src="scripts/quiz.js"></script>
+</body>
+</html>

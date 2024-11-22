@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/login.css">
+  <title>Document</title>
+
+  <!-- firebase load script -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+</head>
+<body>
+  <div class="login-gen-div">
+    <div class="login-div">
+      <div class="welcome-div">
+        <h2>Create an account</h2>
+      </div>
+
+      <div>
+        <div class="email-div">
+          <label for="title">EMAIL <span>*</span></label>
+          <input type="email" placeholder="johndoe@gmail.com" class="email-input">
+          <p class="notify-msg js-email-msg"></p>
+        </div>
+
+        <div class="email-div">
+          <label for="title"> USERNAME <span>*</span></label>
+          <input type="text" placeholder="JohnDoe" class="username-input">
+          <p class="notify-msg js-username-msg"></p>
+        </div>
+
+        <div class="password-div">
+          <label for="title">PASSWORD <span>*</span></label>
+          <input type="password" placeholder="********" class="password-input">
+          <p class="notify-msg"></p>
+        </div>
+
+        <div class="password-div">
+          <label for="title">RE-ENTER PASSWORD <span>*</span></label>
+          <input type="password" placeholder="********" class="re-enter-pwd">
+          <p class="notify-msg js-password-msg"></p>
+        </div>
+
+        <div class="remember-password-div">
+          <div class="remember-div">
+            <input type="checkbox">
+            <div>Remember me</div>
+          </div>
+
+          <div class="password">Forget password?</div>
+        </div>
+      </div>
+
+      <div class="log-in-div">
+        <button class="sign-up-btn">Sign up</button>
+        <a href="login.html">Already have an account? sign in</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/sign-up.js"></script>
+</body>
+</html>

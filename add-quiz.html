@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/add-quiz.css">
+  <link rel="stylesheet" href="styles/intro-quiz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="img-logo">
+      <img src="images/logo.png" width="85%">
+    </div>
+
+    <div class="buttons-div">
+      <div>
+        <a class="login-btn js-login-btn" href="login.html" hidden>Sign in</a>
+      </div>
+      
+      <button class="nav-menu">
+        <span for="nav-toggle" class="burger_icon" id="icon_burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </span>
+      </button>
+    </div>
+
+    <div class="navigation">
+      <div class="naviagation-links">
+        <button class="play" onclick="location.href = '/quiz.html'">Play</button>
+        <button class="add-quiz">Add quiz</button>
+        <button class="mulit-player">Mulit-player competition</button>
+        <!-- <a class="login" href="login.html">Log in</a> -->
+        <button class="login" onclick="window.location.href = '/intro-quiz.html' ">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <h1 class="add-quiz-heading">Add a Quiz</h1>
+  
+    <div class="add-quiz-contents">
+      <h3 class="add-quiz-question">Question</h3>
+
+      <div class="add-quiz-question-container">
+        <strong class="add-quiz-ques">What is the question<span class="star">*</span></strong>
+        <input type="text" placeholder="Type the question here">
+        <p>please make this question concise and remember to end with '?'.</p>
+      </div>
+
+      <div class="add-quiz-question-img-container">
+        <strong >Question Image</strong>
+        <input type="file" accept="image/*">
+        <p>Upload an image only if this question includes an image</p>
+      </div>
+
+      <div class="add-quiz-question-topic-container">
+        <strong>Which topic does this question belong to? <span class="star">*</span></strong>
+        <select>
+          <option>Arts</option>
+          <option>Science and technology</option>
+          <option>Law</option>
+          <option>Sports</option>
+          <option>Medicine</option>
+          <option>Engineering</option>
+          <option>Politics</option>
+          <option>Education</option>
+          <option>Business</option>
+          <option>Astronomy</option>
+          <option>Geography</option>
+          <option>Religion</option>
+          <option>Philosophy</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="add-quiz-question-Round-container">
+        <strong>Round this question should be added to <span class="star">*</span></strong>
+        <select>
+          <option>Round 1</option>
+        </select>
+      </div>
+
+      <h3 class="add-quiz-answer-options">Answer Options</h3>
+
+        <div class="add-quiz-option-A-div">
+          <strong>What is option A? <span class="star">*</span></strong>
+          <input type="text" placeholder="Type option A">
+        </div>
+  
+        <div class="add-quiz-option-A-des-div">
+          <strong>What is option A's descripion</strong>
+          <input type="text" placeholder="Type a description on...">
+          <p>A brief description that provides more context to this option relative to the question.
+            MAX: 100 words</p>
+        </div>
+
+        <div class="add-quiz-option-A-checkbox">
+          <input type="radio" name="radio">
+          <div>Make option A the answer</div>
+        </div>
+
+
+        <!-- <div> -->
+          <div class="add-quiz-option-B-div">
+            <strong>What is option B? <span class="star">*</span></strong>
+            <input type="text" placeholder="Type option B">
+          </div>
+    
+          <div class="add-quiz-option-B-des-div">
+            <strong>What is option B's descripion</strong>
+            <input type="text" placeholder="Type a description on...">
+            <p>A brief description that provides more context to this option relative to the question.
+              MAX: 100 words</p>
+          </div>
+
+          <div class="add-quiz-option-B-checkbox">
+            <input type="radio"  name="radio">
+            <div>Make option B the answer</div>
+          </div>
+
+        <!-- </div> -->
+
+        <!-- <div> -->
+          <div class="add-quiz-option-C-div">
+            <strong>What is option C? <span class="star">*</span></strong>
+            <input type="text" placeholder="Type option C">
+          </div>
+    
+          <div class="add-quiz-option-C-des-div">
+            <strong>What is option C's descripion</strong>
+            <input type="text" placeholder="Type a description on...">
+            <p>A brief description that provides more context to this option relative to the question.
+              MAX: 100 words</p>
+          </div>
+
+          <div class="add-quiz-option-C-checkbox">
+            <input type="radio" name="radio">
+            <div>Make option C the answer</div>
+          </div>
+
+        <!-- </div> -->
+
+        <!-- <div> -->
+          <div class="add-quiz-option-D-div">
+            <strong>What is option D? <span>*</span></strong>
+            <input type="text" placeholder="Type option D">
+          </div>
+    
+          <div class="add-quiz-option-D-des-div">
+            <strong>What is option D's descripion</strong>
+            <input type="text" placeholder="Type a description on...">
+            <p>A brief description that provides more context to this option relative to the question.
+              MAX: 100 words</p>
+          </div>
+
+          <div class="add-quiz-option-D-checkbox">
+            <input type="radio" name="radio">
+            <div>Make option D the answer</div>
+          </div>
+
+        <!-- </div> -->
+
+        <div>
+          <button class="btn1">Add quiz</button>
+          <button class="btn2">Save to draft</button>
+        </div>
+    </div>
+  </div>
+
+  <script src="scripts/navigation.js"></script>
+</body>
+</html>

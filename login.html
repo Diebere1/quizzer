@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/login.css">
+  <title>Document</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="login-gen-div">
+    <div class="login-div">
+      <div class="welcome-div">
+        <h2>Welcome back!</h2>
+        <p>We are excited to see you again</p>
+      </div>
+
+      <div>
+        <div class="email-div">
+          <label for="title">EMAIL OR USERNAME <span>*</span></label>
+          <input type="email" placeholder="johndoe@gmail.com" class="sign-in-email-input">
+        </div>
+
+        <div class="password-div">
+          <label for="title">PASSWORD <span>*</span></label>
+          <input type="password" placeholder="********" class="sign-in-password">
+        </div>
+
+        <div class="remember-password-div">
+          <div class="remember-div">
+            <input type="checkbox">
+            <div>Remember me</div>
+          </div>
+
+          <div class="password">Forget password?</div>
+        </div>
+      </div>
+
+      <div class="log-in-div">
+        <button class="sign-in-btn">Log in</button>
+        <a href="sign-up.html">Create a new a account</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/sign-in.js"></script>
+</body>
+</html>
